@@ -32,3 +32,21 @@ C:\Users\houssaf\Desktop\New folder\ferGestion\Testapp\obj\Debug\Testapp.exe.man
 C:\Users\houssaf\Desktop\New folder\ferGestion\Testapp\obj\Debug\Testapp.application
 C:\Users\houssaf\Desktop\New folder\ferGestion\Testapp\obj\Debug\Testapp.exe
 C:\Users\houssaf\Desktop\New folder\ferGestion\Testapp\obj\Debug\Testapp.pdb
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Database1.mdf
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Database1_log.ldf
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Testapp.exe.config
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Testapp.exe.manifest
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Testapp.application
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Testapp.exe
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\bin\Debug\Testapp.pdb
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.csproj.AssemblyReference.cache
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.AddArticle.resources
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.Form1.resources
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.Properties.Resources.resources
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.csproj.GenerateResource.cache
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.csproj.CoreCompileInputs.cache
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.exe.manifest
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.application
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.exe
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.pdb
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.Article.resources
