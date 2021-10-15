@@ -32,6 +32,7 @@ namespace Testapp
         {
             Article article = new Article();
             article.Dock = DockStyle.Fill;
+            article.frm = this;
             container.Controls.Add(article);
         }
     }

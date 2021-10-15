@@ -117,6 +117,7 @@ namespace Testapp
             this.btn_delete_article.TabIndex = 2;
             this.btn_delete_article.Text = "Supprimer";
             this.btn_delete_article.UseVisualStyleBackColor = false;
+            this.btn_delete_article.Click += new System.EventHandler(this.btn_delete_article_Click);
             // 
             // btn_add_article
             // 
@@ -148,6 +149,7 @@ namespace Testapp
             this.btn_modifier_article.TabIndex = 1;
             this.btn_modifier_article.Text = "Modifier";
             this.btn_modifier_article.UseVisualStyleBackColor = false;
+            this.btn_modifier_article.Click += new System.EventHandler(this.btn_modifier_article_Click);
             // 
             // groupBox1
             // 

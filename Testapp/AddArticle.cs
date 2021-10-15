@@ -24,13 +24,11 @@ namespace Testapp
         {
             try
             {
-                string query = "INSERT INTO article(Article,Prix,StockI,Sortie,StockF) values (@article ,@prix ,@stockI ,@stockS ,@stockA)";
+                string query = "INSERT INTO article values (@article,@prix,@type)";
                 SqlCommand cmd = new SqlCommand(query, cnx);
                 cmd.Parameters.AddWithValue("@article", txt_nom.Text);
                 cmd.Parameters.AddWithValue("@prix", nub_prix.Value);
-                cmd.Parameters.AddWithValue("@stockI", nub_stockI.Value);
-                cmd.Parameters.AddWithValue("@stockS", nub_stockS.Value);
-                cmd.Parameters.AddWithValue("@stockA", nub_stockA.Value);
+                cmd.Parameters.AddWithValue("@type", cmb_type.SelectedValue);
                 cnx.Open();
                 cmd.ExecuteNonQuery();
                 this.Close();
@@ -39,6 +37,33 @@ namespace Testapp
             catch (Exception ex)
             {
                 MessageBox.Show("Problème de connexion! ");
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddArticle_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt_articles = new DataTable();
+                string query = "select * from type_article";
+                SqlCommand cmd = new SqlCommand(query, cnx);
+                cnx.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt_articles.Load(dr);
+                cmb_type.DataSource = dt_articles;
+                cmb_type.ValueMember = "ID";
+                cmb_type.DisplayMember = "Designation";
+                cnx.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Problème de connexion! ");
+                this.Close();
             }
         }
     }

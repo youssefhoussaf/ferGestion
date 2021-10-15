@@ -50,3 +50,4 @@ C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.application
 C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.exe
 C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.pdb
 C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.Article.resources
+C:\Users\houssaf\Desktop\test\ferGestion\Testapp\obj\Debug\Testapp.UpdateArticle.resources
