@@ -61,7 +61,9 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -111,6 +113,12 @@
     <Compile Include="UpdateArticle.Designer.cs">
       <DependentUpon>UpdateArticle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ventes.Designer.cs">
+      <DependentUpon>Ventes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddArticle.resx">
       <DependentUpon>AddArticle.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateArticle.resx">
       <DependentUpon>UpdateArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventes.resx">
+      <DependentUpon>Ventes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FerGestionDataSet.xsc">
       <DependentUpon>FerGestionDataSet.xsd</DependentUpon>

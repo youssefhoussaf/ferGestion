@@ -30,10 +30,20 @@ namespace Testapp
 
         private void btn_articles_Click(object sender, EventArgs e)
         {
+            container.Controls.Clear();
             Article article = new Article();
             article.Dock = DockStyle.Fill;
             article.frm = this;
             container.Controls.Add(article);
+        }
+
+        private void btn_ventes_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            Ventes vente = new Ventes();
+            vente.Dock = DockStyle.Fill;
+            vente.frm = this;
+            container.Controls.Add(vente);
         }
     }
 }
