@@ -58,6 +58,9 @@ namespace Testapp
                 cmb_type.DataSource = dt_articles;
                 cmb_type.ValueMember = "ID";
                 cmb_type.DisplayMember = "Designation";
+                cmb_type.DropDownStyle = ComboBoxStyle.DropDown;
+                cmb_type.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cmb_type.AutoCompleteSource = AutoCompleteSource.ListItems;
                 cnx.Close();
             }
             catch (Exception ex)

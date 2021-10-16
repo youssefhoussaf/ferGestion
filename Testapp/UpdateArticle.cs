@@ -39,6 +39,9 @@ namespace Testapp
                 cmb_type.ValueMember = "ID";
                 cmb_type.DisplayMember = "Designation";
                 cmb_type.SelectedValue = type;
+                cmb_type.DropDownStyle = ComboBoxStyle.DropDown;
+                cmb_type.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cmb_type.AutoCompleteSource = AutoCompleteSource.ListItems;
                 txt_nom.Text = article;
                 nub_prix.Value = new decimal(prix);
                 cnx.Close();

@@ -38,11 +38,11 @@ namespace Testapp
             this.btn_add_article = new System.Windows.Forms.Button();
             this.btn_modifier_article = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmb_mois = new System.Windows.Forms.ComboBox();
+            this.cmb_annee = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -153,11 +153,11 @@ namespace Testapp
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmb_annee);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cmb_mois);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(15, 12);
@@ -167,44 +167,46 @@ namespace Testapp
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "À:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(6, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 18);
+            this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "De:";
+            this.label1.Text = "Mois:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(793, 23);
+            this.textBox1.Location = new System.Drawing.Point(793, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(201, 24);
             this.textBox1.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // cmb_mois
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(355, 23);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(273, 24);
-            this.dateTimePicker2.TabIndex = 1;
+            this.cmb_mois.FormattingEnabled = true;
+            this.cmb_mois.Location = new System.Drawing.Point(62, 22);
+            this.cmb_mois.Name = "cmb_mois";
+            this.cmb_mois.Size = new System.Drawing.Size(121, 26);
+            this.cmb_mois.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // cmb_annee
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(42, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(273, 24);
-            this.dateTimePicker1.TabIndex = 0;
+            this.cmb_annee.FormattingEnabled = true;
+            this.cmb_annee.Location = new System.Drawing.Point(260, 22);
+            this.cmb_annee.Name = "cmb_annee";
+            this.cmb_annee.Size = new System.Drawing.Size(121, 26);
+            this.cmb_annee.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(199, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 18);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "année:";
             // 
             // Article
             // 
@@ -236,10 +238,10 @@ namespace Testapp
         private System.Windows.Forms.Button btn_add_article;
         private System.Windows.Forms.Button btn_modifier_article;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cmb_mois;
+        private System.Windows.Forms.ComboBox cmb_annee;
+        private System.Windows.Forms.Label label2;
     }
 }
