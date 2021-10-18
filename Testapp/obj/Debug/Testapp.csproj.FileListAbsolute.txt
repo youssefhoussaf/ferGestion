@@ -91,3 +91,5 @@ C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.exe
 C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.pdb
 C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.Ventes.resources
 C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.AddVentes.resources
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.AddVentes.resources
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.Ventes.resources

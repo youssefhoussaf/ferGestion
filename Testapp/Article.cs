@@ -26,42 +26,11 @@ namespace Testapp
         {
             try
             {
-                DataTable dt = new DataTable();
-                dt.Clear();
-                dt.Columns.Add("name");
-                dt.Columns.Add("mois");
-                string[] monthNamesFr = { "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre" };
-                for (int i = 0; i < monthNamesFr.Length; i++)
-                {
-                    DataRow dt_row = dt.NewRow();
-                    dt_row["name"] = monthNamesFr[i];
-                    dt_row["mois"] = i+1;
-                    dt.Rows.Add(dt_row);
-                }
-                cmb_mois.DataSource = dt;
-                cmb_mois.ValueMember = "mois";
-                cmb_mois.DisplayMember = "name";
-                cmb_mois.DropDownStyle = ComboBoxStyle.DropDownList;
-                int month = DateTime.Now.Month;
-                cmb_mois.SelectedValue = month;
-                DataTable dt2 = new DataTable();
-                dt2.Clear();
-                dt2.Columns.Add("annee");
-                for(int i = 0; i < 200; i++)
-                {
-                    DataRow dt_row = dt2.NewRow();
-                    dt_row["annee"] = 2021 + i;
-                    dt2.Rows.Add(dt_row);
-                }
-                cmb_annee.DataSource = dt2;
-                cmb_annee.ValueMember = "annee";
-                cmb_annee.DisplayMember = "annee";
-                cmb_annee.DropDownStyle = ComboBoxStyle.DropDownList;
-                int year = DateTime.Now.Year;
-                cmb_annee.SelectedValue = year;
                 DataTable dt_articles = new DataTable();
-                string query = "select a.ID , a.Article , a.Prix as 'prix de vente' , ISNULL(sum(ma.Qte),0) as 'stock I' , ISNULL(sum(mv.Qte),0) as 'sortie' , ISNULL(sum(ma.Qte),0) - ISNULL(sum(mv.Qte),0) as 'stock F' , a.ID_type from article a left join achats ma on a.ID = ma.Article left join ventes mv on a.ID = mv.Article group by a.ID , a.Article , a.Prix , a.ID_type;";
+                string query = "select a.ID , a.Article , a.Prix as 'prix de vente' , (ISNULL(totals.qte,0) - ISNULL(totalsv.qte,0)) + ISNULL(sum(ma.Qte),0) as 'stock I' , ISNULL(sum(mv.Qte),0) as 'sortie' , (ISNULL(totals.qte,0) - ISNULL(totalsv.qte,0)) + ISNULL(sum(ma.Qte),0) - ISNULL(sum(mv.Qte),0) as 'stock F' , a.ID_type from article a left join achats ma on a.ID = ma.Article and ((MONTH(ma.Created_at)=@month and YEAR(ma.Created_at) = @year)) left join ventes mv on a.ID = mv.Article and ((MONTH(mv.Created_at)=@month and YEAR(mv.Created_at) = @year)) left join (select Article , sum(Qte) as 'qte' from achats where MONTH(Created_at)<@month and YEAR(Created_at)<=@year group by Article) as totals on totals.Article = a.ID left join (select Article , sum(Qte) as 'qte' from ventes where MONTH(Created_at)<@month and YEAR(Created_at)<=@year group by Article) as totalsv on totalsv.Article = a.ID group by a.ID , a.Article , a.Prix , a.ID_type , totals.qte , totalsv.qte;";
                 SqlCommand cmd = new SqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@year", cmb_annee.SelectedValue);
+                cmd.Parameters.AddWithValue("@month", cmb_mois.SelectedValue);
                 cnx.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 dt_articles.Load(dr);
@@ -72,7 +41,7 @@ namespace Testapp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Problème de connexion! ");
+                MessageBox.Show("Problème de connexion! "+  ex.Message);
                 frm.Close();
             }
         }
@@ -91,6 +60,39 @@ namespace Testapp
 
         private void Article_Load(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            dt.Clear();
+            dt.Columns.Add("name");
+            dt.Columns.Add("mois");
+            string[] monthNamesFr = { "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre" };
+            for (int i = 0; i < monthNamesFr.Length; i++)
+            {
+                DataRow dt_row = dt.NewRow();
+                dt_row["name"] = monthNamesFr[i];
+                dt_row["mois"] = i + 1;
+                dt.Rows.Add(dt_row);
+            }
+            cmb_mois.DataSource = dt;
+            cmb_mois.ValueMember = "mois";
+            cmb_mois.DisplayMember = "name";
+            cmb_mois.DropDownStyle = ComboBoxStyle.DropDownList;
+            int month = DateTime.Now.Month;
+            cmb_mois.SelectedValue = month;
+            DataTable dt2 = new DataTable();
+            dt2.Clear();
+            dt2.Columns.Add("annee");
+            for (int i = 0; i < 200; i++)
+            {
+                DataRow dt_row = dt2.NewRow();
+                dt_row["annee"] = 2021 + i;
+                dt2.Rows.Add(dt_row);
+            }
+            cmb_annee.DataSource = dt2;
+            cmb_annee.ValueMember = "annee";
+            cmb_annee.DisplayMember = "annee";
+            cmb_annee.DropDownStyle = ComboBoxStyle.DropDownList;
+            int year = DateTime.Now.Year;
+            cmb_annee.SelectedValue = year;
             load();
         }
 
@@ -152,6 +154,16 @@ namespace Testapp
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cmb_mois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_filter_Click(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }
