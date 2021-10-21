@@ -53,7 +53,7 @@ namespace Testapp
             this.panel1.Controls.Add(this.btn_articles);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 949);
             this.panel1.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace Testapp
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(9, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,12 +89,13 @@ namespace Testapp
             this.btn_types.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_types.ForeColor = System.Drawing.Color.Black;
             this.btn_types.Location = new System.Drawing.Point(0, 378);
-            this.btn_types.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_types.Margin = new System.Windows.Forms.Padding(4);
             this.btn_types.Name = "btn_types";
             this.btn_types.Size = new System.Drawing.Size(379, 79);
             this.btn_types.TabIndex = 3;
             this.btn_types.Text = "Types d\'article";
             this.btn_types.UseVisualStyleBackColor = false;
+            this.btn_types.Click += new System.EventHandler(this.btn_types_Click);
             // 
             // btn_achats
             // 
@@ -104,7 +105,7 @@ namespace Testapp
             this.btn_achats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_achats.ForeColor = System.Drawing.Color.Black;
             this.btn_achats.Location = new System.Drawing.Point(0, 302);
-            this.btn_achats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_achats.Margin = new System.Windows.Forms.Padding(4);
             this.btn_achats.Name = "btn_achats";
             this.btn_achats.Size = new System.Drawing.Size(379, 79);
             this.btn_achats.TabIndex = 2;
@@ -119,7 +120,7 @@ namespace Testapp
             this.btn_ventes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ventes.ForeColor = System.Drawing.Color.Black;
             this.btn_ventes.Location = new System.Drawing.Point(0, 224);
-            this.btn_ventes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ventes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ventes.Name = "btn_ventes";
             this.btn_ventes.Size = new System.Drawing.Size(379, 79);
             this.btn_ventes.TabIndex = 1;
@@ -135,7 +136,7 @@ namespace Testapp
             this.btn_articles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_articles.ForeColor = System.Drawing.Color.Black;
             this.btn_articles.Location = new System.Drawing.Point(0, 146);
-            this.btn_articles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_articles.Margin = new System.Windows.Forms.Padding(4);
             this.btn_articles.Name = "btn_articles";
             this.btn_articles.Size = new System.Drawing.Size(379, 79);
             this.btn_articles.TabIndex = 0;
@@ -147,7 +148,7 @@ namespace Testapp
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(379, 0);
-            this.container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.container.Margin = new System.Windows.Forms.Padding(4);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(1369, 949);
             this.container.TabIndex = 1;
@@ -160,7 +161,7 @@ namespace Testapp
             this.Controls.Add(this.container);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

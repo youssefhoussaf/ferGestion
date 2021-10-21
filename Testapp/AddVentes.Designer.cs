@@ -30,17 +30,17 @@ namespace Testapp
         private void InitializeComponent()
         {
             this.btn_add_vente = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nom = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.qte = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.remise = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmb_articles = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.qte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.remise)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_add_vente
@@ -57,18 +57,7 @@ namespace Testapp
             this.btn_add_vente.TabIndex = 21;
             this.btn_add_vente.Text = "Ajouter";
             this.btn_add_vente.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(68, 165);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 24);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Date création :";
+            this.btn_add_vente.Click += new System.EventHandler(this.btn_add_vente_Click);
             // 
             // label1
             // 
@@ -90,20 +79,20 @@ namespace Testapp
             this.txt_nom.Size = new System.Drawing.Size(493, 22);
             this.txt_nom.TabIndex = 16;
             // 
-            // numericUpDown1
+            // qte
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(282, 209);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.qte.DecimalPlaces = 2;
+            this.qte.Location = new System.Drawing.Point(282, 209);
+            this.qte.Margin = new System.Windows.Forms.Padding(4);
+            this.qte.Maximum = new decimal(new int[] {
             50000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(495, 22);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.qte.Name = "qte";
+            this.qte.Size = new System.Drawing.Size(495, 22);
+            this.qte.TabIndex = 24;
+            this.qte.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label4
             // 
@@ -117,26 +106,19 @@ namespace Testapp
             this.label4.TabIndex = 23;
             this.label4.Text = "Qté :";
             // 
-            // dateTimePicker1
+            // remise
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(282, 167);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(493, 22);
-            this.dateTimePicker1.TabIndex = 25;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(282, 252);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.remise.DecimalPlaces = 2;
+            this.remise.Location = new System.Drawing.Point(282, 252);
+            this.remise.Margin = new System.Windows.Forms.Padding(4);
+            this.remise.Maximum = new decimal(new int[] {
             50000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(495, 22);
-            this.numericUpDown2.TabIndex = 27;
+            this.remise.Name = "remise";
+            this.remise.Size = new System.Drawing.Size(495, 22);
+            this.remise.TabIndex = 27;
             // 
             // label5
             // 
@@ -162,26 +144,47 @@ namespace Testapp
             this.label3.Text = "Ajouter des ventes";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(68, 167);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 24);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Article :";
+            // 
+            // cmb_articles
+            // 
+            this.cmb_articles.FormattingEnabled = true;
+            this.cmb_articles.Location = new System.Drawing.Point(282, 167);
+            this.cmb_articles.Name = "cmb_articles";
+            this.cmb_articles.Size = new System.Drawing.Size(493, 24);
+            this.cmb_articles.TabIndex = 31;
+            // 
             // AddVentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(888, 467);
+            this.Controls.Add(this.cmb_articles);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.remise);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.qte);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_add_vente);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_nom);
             this.Name = "AddVentes";
             this.Text = "AddVentes";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.Load += new System.EventHandler(this.AddVentes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.qte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.remise)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,14 +192,14 @@ namespace Testapp
 
         #endregion
         private System.Windows.Forms.Button btn_add_vente;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_nom;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown qte;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown remise;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmb_articles;
     }
 }

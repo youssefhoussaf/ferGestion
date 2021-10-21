@@ -45,5 +45,14 @@ namespace Testapp
             vente.frm = this;
             container.Controls.Add(vente);
         }
+
+        private void btn_types_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            types type = new types();
+            type.Dock = DockStyle.Fill;
+            type.frm = this;
+            container.Controls.Add(type);
+        }
     }
 }

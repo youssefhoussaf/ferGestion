@@ -27,7 +27,7 @@ namespace Testapp
             try
             {
                 DataTable dt_articles = new DataTable();
-                string query = "SELECT v.ID , v.created_at as 'date' , a.Article , v.Qte , v.Prix as 'P/U' , v.remise , (v.Prix * v.Qte) - (v.Prix * v.Qte/v.remise) as 'total' , v.Client , a.ID as 'article_id' FROM ventes v left join article a on a.ID = v.Article WhERE MONTH(v.Created_at) = @month AND YEAR(v.Created_at) = @year GROUP BY v.ID , v.remise , v.Client  , v.Qte , v.Prix , v.created_at , a.ID , a.Article;";
+                string query = "SELECT v.ID , v.created_at as 'date' , a.Article , v.Qte , v.Prix as 'P/U' , CONCAT( v.remise,'%') as 'remise' ,  (v.Prix * v.Qte) - (v.Prix * ISNULL(v.Qte/ NULLIF((v.remise),0),0)) as 'total' , v.Client , a.ID as 'article_id' FROM ventes v left join article a on a.ID = v.Article WhERE MONTH(v.Created_at) = @month AND YEAR(v.Created_at) = @year GROUP BY v.ID , v.remise , v.Client  , v.Qte , v.Prix , v.created_at , a.ID , a.Article;";
                 SqlCommand cmd = new SqlCommand(query, cnx);
                 cmd.Parameters.AddWithValue("@year", cmb_annee.SelectedValue);
                 cmd.Parameters.AddWithValue("@month", cmb_mois.SelectedValue);
@@ -41,7 +41,7 @@ namespace Testapp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Problème de connexion! ");
+                MessageBox.Show("Problème de connexion! " + ex.Message);
                 frm.Close();
             }
         }
@@ -51,9 +51,6 @@ namespace Testapp
         }
         private void btn_add_article_Click(object sender, EventArgs e)
         {
-            Form addForm = new AddVentes();
-            addForm.FormClosing += new FormClosingEventHandler(f_FormClosed);
-            addForm.ShowDialog();
         }
 
         private void Ventes_Load(object sender, EventArgs e)
@@ -97,7 +94,49 @@ namespace Testapp
 
         private void btn_add_article_Click_1(object sender, EventArgs e)
         {
+            Form addForm = new AddVentes();
+            addForm.FormClosing += new FormClosingEventHandler(f_FormClosed);
+            addForm.ShowDialog();
+        }
 
+        private void btn_delete_article_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Merci de selectionne une ou plusieurs lignes");
+            }
+            else
+            {
+                DialogResult dr = MessageBox.Show("voulez-vous vraiment supprimer les articles sélectionnés?", "Supprimer articles", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        int id = Convert.ToInt32(row.Cells[0].Value);
+                        try
+                        {
+                            string query = "delete from ventes where ID = @id";
+                            SqlCommand cmd = new SqlCommand(query, cnx);
+                            cmd.Parameters.AddWithValue("@id", id);
+                            cnx.Open();
+                            cmd.ExecuteNonQuery();
+                            cnx.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Problème de connexion! " + ex.Message);
+                        }
+                    }
+
+                    load();
+                }
+            }
+        }
+
+        private void btn_filter_Click(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }
