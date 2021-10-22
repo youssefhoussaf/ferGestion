@@ -55,7 +55,6 @@ namespace Testapp
 
         private void Ventes_Load(object sender, EventArgs e)
         {
-
             DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("name");
