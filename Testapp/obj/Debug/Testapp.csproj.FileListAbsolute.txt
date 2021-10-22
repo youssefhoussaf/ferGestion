@@ -94,3 +94,4 @@ C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.AddVentes.
 C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.AddVentes.resources
 C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.Ventes.resources
 C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.types.resources
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.types.resources
