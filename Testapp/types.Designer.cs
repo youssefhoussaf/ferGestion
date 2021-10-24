@@ -59,19 +59,19 @@ namespace Testapp
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1436, 673);
+            this.panel2.Size = new System.Drawing.Size(1616, 841);
             this.panel2.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 165);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(0, 206);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1436, 508);
+            this.panel4.Size = new System.Drawing.Size(1616, 635);
             this.panel4.TabIndex = 1;
             // 
             // dataGridView1
@@ -81,11 +81,12 @@ namespace Testapp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1436, 508);
+            this.dataGridView1.Size = new System.Drawing.Size(1616, 635);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // panel3
             // 
@@ -96,26 +97,27 @@ namespace Testapp
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1436, 165);
+            this.panel3.Size = new System.Drawing.Size(1616, 206);
             this.panel3.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 50);
+            this.label1.Location = new System.Drawing.Point(1, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 24);
+            this.label1.Size = new System.Drawing.Size(139, 26);
             this.label1.TabIndex = 7;
             this.label1.Text = "Désignation :";
             // 
             // type_name
             // 
-            this.type_name.Location = new System.Drawing.Point(3, 78);
+            this.type_name.Location = new System.Drawing.Point(3, 98);
+            this.type_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.type_name.Name = "type_name";
-            this.type_name.Size = new System.Drawing.Size(416, 22);
+            this.type_name.Size = new System.Drawing.Size(468, 26);
             this.type_name.TabIndex = 6;
             // 
             // label3
@@ -123,9 +125,9 @@ namespace Testapp
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(1088, 0);
+            this.label3.Location = new System.Drawing.Point(1224, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(348, 100);
+            this.label3.Size = new System.Drawing.Size(392, 125);
             this.label3.TabIndex = 5;
             this.label3.Text = "Liste types d\'article";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,19 +139,19 @@ namespace Testapp
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 100);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(0, 125);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1436, 65);
+            this.panel5.Size = new System.Drawing.Size(1616, 81);
             this.panel5.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(271, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(305, 38);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -160,10 +162,10 @@ namespace Testapp
             this.panel1.Controls.Add(this.btn_add_article);
             this.panel1.Controls.Add(this.btn_modifier_article);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(879, 0);
+            this.panel1.Location = new System.Drawing.Point(989, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(557, 65);
+            this.panel1.Size = new System.Drawing.Size(627, 81);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -173,10 +175,10 @@ namespace Testapp
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(39, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(44, 16);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 44);
+            this.button1.Size = new System.Drawing.Size(183, 55);
             this.button1.TabIndex = 3;
             this.button1.Text = "Rénitialiser";
             this.button1.UseVisualStyleBackColor = false;
@@ -188,10 +190,10 @@ namespace Testapp
             this.btn_add_article.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_add_article.Location = new System.Drawing.Point(211, 12);
-            this.btn_add_article.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_add_article.Location = new System.Drawing.Point(237, 15);
+            this.btn_add_article.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_add_article.Name = "btn_add_article";
-            this.btn_add_article.Size = new System.Drawing.Size(163, 46);
+            this.btn_add_article.Size = new System.Drawing.Size(183, 58);
             this.btn_add_article.TabIndex = 0;
             this.btn_add_article.Text = "Ajouter";
             this.btn_add_article.UseVisualStyleBackColor = false;
@@ -203,10 +205,10 @@ namespace Testapp
             this.btn_modifier_article.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_modifier_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modifier_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_modifier_article.Location = new System.Drawing.Point(381, 12);
-            this.btn_modifier_article.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_modifier_article.Location = new System.Drawing.Point(429, 15);
+            this.btn_modifier_article.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_modifier_article.Name = "btn_modifier_article";
-            this.btn_modifier_article.Size = new System.Drawing.Size(163, 46);
+            this.btn_modifier_article.Size = new System.Drawing.Size(183, 58);
             this.btn_modifier_article.TabIndex = 1;
             this.btn_modifier_article.Text = "Modifier";
             this.btn_modifier_article.UseVisualStyleBackColor = false;
@@ -215,19 +217,20 @@ namespace Testapp
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(3, 38);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 30);
+            this.textBox1.Size = new System.Drawing.Size(298, 35);
             this.textBox1.TabIndex = 2;
             // 
             // types
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "types";
-            this.Size = new System.Drawing.Size(1436, 673);
+            this.Size = new System.Drawing.Size(1616, 841);
             this.Load += new System.EventHandler(this.types_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

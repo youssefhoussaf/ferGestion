@@ -22,6 +22,7 @@ namespace Testapp
 
         private void btn_add_article_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string query = "INSERT INTO article values (@article,@prix,@type)";

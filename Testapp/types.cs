@@ -132,5 +132,21 @@ namespace Testapp
         {
 
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (dataGridView1.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Merci de selectionne une seule ligne");
+                }
+                else
+                {
+                    id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                    type_name.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                }
+            }
+        }
     }
 }
