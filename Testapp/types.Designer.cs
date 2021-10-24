@@ -34,17 +34,16 @@ namespace Testapp
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.type_name = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_add_article = new System.Windows.Forms.Button();
-            this.btn_delete_article = new System.Windows.Forms.Button();
             this.btn_modifier_article = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.type_name = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,14 +86,10 @@ namespace Testapp
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1436, 508);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.type_name);
             this.panel3.Controls.Add(this.label3);
@@ -105,6 +100,23 @@ namespace Testapp
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1436, 165);
             this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Désignation :";
+            // 
+            // type_name
+            // 
+            this.type_name.Location = new System.Drawing.Point(3, 78);
+            this.type_name.Name = "type_name";
+            this.type_name.Size = new System.Drawing.Size(416, 22);
+            this.type_name.TabIndex = 6;
             // 
             // label3
             // 
@@ -144,15 +156,31 @@ namespace Testapp
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_add_article);
-            this.panel1.Controls.Add(this.btn_delete_article);
             this.panel1.Controls.Add(this.btn_modifier_article);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(905, 0);
+            this.panel1.Location = new System.Drawing.Point(879, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(531, 65);
+            this.panel1.Size = new System.Drawing.Size(557, 65);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(39, 13);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 44);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Rénitialiser";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_add_article
             // 
@@ -160,7 +188,7 @@ namespace Testapp
             this.btn_add_article.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_add_article.Location = new System.Drawing.Point(19, 12);
+            this.btn_add_article.Location = new System.Drawing.Point(211, 12);
             this.btn_add_article.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_article.Name = "btn_add_article";
             this.btn_add_article.Size = new System.Drawing.Size(163, 46);
@@ -169,28 +197,13 @@ namespace Testapp
             this.btn_add_article.UseVisualStyleBackColor = false;
             this.btn_add_article.Click += new System.EventHandler(this.btn_add_article_Click);
             // 
-            // btn_delete_article
-            // 
-            this.btn_delete_article.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_delete_article.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_delete_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_article.ForeColor = System.Drawing.Color.Red;
-            this.btn_delete_article.Location = new System.Drawing.Point(360, 12);
-            this.btn_delete_article.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_delete_article.Name = "btn_delete_article";
-            this.btn_delete_article.Size = new System.Drawing.Size(163, 46);
-            this.btn_delete_article.TabIndex = 2;
-            this.btn_delete_article.Text = "Supprimer";
-            this.btn_delete_article.UseVisualStyleBackColor = false;
-            this.btn_delete_article.Click += new System.EventHandler(this.btn_delete_article_Click);
-            // 
             // btn_modifier_article
             // 
             this.btn_modifier_article.BackColor = System.Drawing.SystemColors.Control;
             this.btn_modifier_article.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_modifier_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modifier_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_modifier_article.Location = new System.Drawing.Point(189, 12);
+            this.btn_modifier_article.Location = new System.Drawing.Point(381, 12);
             this.btn_modifier_article.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modifier_article.Name = "btn_modifier_article";
             this.btn_modifier_article.Size = new System.Drawing.Size(163, 46);
@@ -207,38 +220,6 @@ namespace Testapp
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(265, 30);
             this.textBox1.TabIndex = 2;
-            // 
-            // type_name
-            // 
-            this.type_name.Location = new System.Drawing.Point(7, 71);
-            this.type_name.Name = "type_name";
-            this.type_name.Size = new System.Drawing.Size(416, 22);
-            this.type_name.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 24);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Désignation :";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(430, 55);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 38);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Rénitialiser";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // types
             // 
@@ -272,7 +253,6 @@ namespace Testapp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_add_article;
-        private System.Windows.Forms.Button btn_delete_article;
         private System.Windows.Forms.Button btn_modifier_article;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;

@@ -76,39 +76,6 @@ namespace Testapp
            
         }
 
-        private void btn_delete_article_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Merci de selectionne une ou plusieurs lignes");
-            }
-            else
-            {
-                DialogResult dr = MessageBox.Show("voulez-vous vraiment supprimer les articles sélectionnés?", "Supprimer articles", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes)
-                {
-
-                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                    {
-                        int id = Convert.ToInt32(row.Cells[0].Value);
-                        try
-                        {
-                            string query = "delete from type_article where ID = @id";
-                            SqlCommand cmd = new SqlCommand(query, cnx);
-                            cmd.Parameters.AddWithValue("@id", id);
-                            cnx.Open();
-                            cmd.ExecuteNonQuery();
-                            cnx.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Problème de connexion! " + ex.Message);
-                        }
-                    }
-                    load();
-                }
-            }
-        }
 
         int id = -1;
         private void btn_modifier_article_Click(object sender, EventArgs e)
@@ -138,10 +105,6 @@ namespace Testapp
                 }
             }
         }
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -153,8 +116,6 @@ namespace Testapp
         {
             if (e.StateChanged == DataGridViewElementStates.Selected)
             {
-
-
                 if (dataGridView1.SelectedRows.Count > 1)
                 {
                     MessageBox.Show("Merci de selectionne une seule ligne");
@@ -167,7 +128,7 @@ namespace Testapp
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

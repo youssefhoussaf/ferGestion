@@ -44,11 +44,11 @@ namespace Testapp
             this.btn_delete_article = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_filter = new System.Windows.Forms.Button();
             this.cmb_annee = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_mois = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_filter = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +66,7 @@ namespace Testapp
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1436, 673);
             this.panel2.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace Testapp
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1436, 673);
             this.panel4.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace Testapp
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1436, 673);
             this.panel1.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace Testapp
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 165);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1436, 508);
             this.panel3.TabIndex = 1;
@@ -109,7 +109,7 @@ namespace Testapp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1436, 508);
@@ -123,7 +123,7 @@ namespace Testapp
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1436, 165);
             this.panel5.TabIndex = 0;
@@ -148,7 +148,7 @@ namespace Testapp
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 100);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1436, 65);
             this.panel6.TabIndex = 4;
@@ -169,10 +169,10 @@ namespace Testapp
             this.panel7.Controls.Add(this.btn_add_article);
             this.panel7.Controls.Add(this.btn_delete_article);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(904, 0);
+            this.panel7.Location = new System.Drawing.Point(1065, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(532, 65);
+            this.panel7.Size = new System.Drawing.Size(371, 65);
             this.panel7.TabIndex = 3;
             // 
             // btn_add_article
@@ -181,8 +181,8 @@ namespace Testapp
             this.btn_add_article.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_add_article.Location = new System.Drawing.Point(130, 12);
-            this.btn_add_article.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_article.Location = new System.Drawing.Point(19, 11);
+            this.btn_add_article.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_article.Name = "btn_add_article";
             this.btn_add_article.Size = new System.Drawing.Size(163, 46);
             this.btn_add_article.TabIndex = 0;
@@ -196,8 +196,8 @@ namespace Testapp
             this.btn_delete_article.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_delete_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete_article.ForeColor = System.Drawing.Color.Red;
-            this.btn_delete_article.Location = new System.Drawing.Point(360, 12);
-            this.btn_delete_article.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete_article.Location = new System.Drawing.Point(195, 11);
+            this.btn_delete_article.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete_article.Name = "btn_delete_article";
             this.btn_delete_article.Size = new System.Drawing.Size(163, 46);
             this.btn_delete_article.TabIndex = 2;
@@ -209,7 +209,7 @@ namespace Testapp
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(1, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(265, 30);
             this.textBox1.TabIndex = 2;
@@ -224,19 +224,34 @@ namespace Testapp
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(20, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(699, 78);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
+            // btn_filter
+            // 
+            this.btn_filter.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_filter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_filter.ForeColor = System.Drawing.Color.Black;
+            this.btn_filter.Location = new System.Drawing.Point(530, 15);
+            this.btn_filter.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_filter.Name = "btn_filter";
+            this.btn_filter.Size = new System.Drawing.Size(163, 58);
+            this.btn_filter.TabIndex = 7;
+            this.btn_filter.Text = "Filtrer";
+            this.btn_filter.UseVisualStyleBackColor = false;
+            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
+            // 
             // cmb_annee
             // 
             this.cmb_annee.FormattingEnabled = true;
             this.cmb_annee.Location = new System.Drawing.Point(347, 27);
-            this.cmb_annee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_annee.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_annee.Name = "cmb_annee";
             this.cmb_annee.Size = new System.Drawing.Size(160, 32);
             this.cmb_annee.TabIndex = 6;
@@ -255,7 +270,7 @@ namespace Testapp
             // 
             this.cmb_mois.FormattingEnabled = true;
             this.cmb_mois.Location = new System.Drawing.Point(83, 27);
-            this.cmb_mois.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_mois.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_mois.Name = "cmb_mois";
             this.cmb_mois.Size = new System.Drawing.Size(160, 32);
             this.cmb_mois.TabIndex = 4;
@@ -269,21 +284,6 @@ namespace Testapp
             this.label1.Size = new System.Drawing.Size(60, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mois:";
-            // 
-            // btn_filter
-            // 
-            this.btn_filter.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_filter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_filter.ForeColor = System.Drawing.Color.Black;
-            this.btn_filter.Location = new System.Drawing.Point(530, 15);
-            this.btn_filter.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_filter.Name = "btn_filter";
-            this.btn_filter.Size = new System.Drawing.Size(163, 58);
-            this.btn_filter.TabIndex = 7;
-            this.btn_filter.Text = "Filtrer";
-            this.btn_filter.UseVisualStyleBackColor = false;
-            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
             // 
             // Ventes
             // 

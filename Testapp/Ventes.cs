@@ -127,7 +127,6 @@ namespace Testapp
                             MessageBox.Show("Problème de connexion! " + ex.Message);
                         }
                     }
-
                     load();
                 }
             }
