@@ -151,6 +151,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="types.resx">
       <DependentUpon>types.cs</DependentUpon>
@@ -217,6 +218,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\i-beam-removebg-preview %283%29.png" />
+    <None Include="Resources\i-beam-removebg-preview %282%29.png" />
+    <None Include="Resources\i-beam-removebg-preview %281%29.png" />
+    <None Include="Resources\i-beam-removebg-preview.png" />
+    <None Include="Resources\téléchargement-removebg-preview.png" />
+    <None Include="Resources\window-maximize-5.png" />
+    <None Include="Resources\istockphoto-1131230925-170667a-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
