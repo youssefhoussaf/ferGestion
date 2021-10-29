@@ -148,5 +148,12 @@ namespace Testapp
                 }
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var dt = (DataTable)dataGridView1.DataSource;
+            dt.DefaultView.RowFilter = string.Format("Designation like '%{0}%'", textBox1.Text.Trim().Replace("'", "''"));
+            dataGridView1.Refresh();
+        }
     }
 }

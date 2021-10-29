@@ -76,6 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="achats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="achats.Designer.cs">
+      <DependentUpon>achats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addAchat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addAchat.Designer.cs">
+      <DependentUpon>addAchat.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddArticle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="types.cs">
@@ -131,6 +149,12 @@
     <Compile Include="Ventes.Designer.cs">
       <DependentUpon>Ventes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="achats.resx">
+      <DependentUpon>achats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addAchat.resx">
+      <DependentUpon>addAchat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddArticle.resx">
       <DependentUpon>AddArticle.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,6 +245,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\unnamed.gif" />
+    <None Include="Resources\i-beam-removebg-preview %283%291.png" />
+    <None Include="Resources\download-removebg-preview %281%29.png" />
+    <None Include="Resources\images__1_-removebg-preview %282%29.png" />
     <None Include="Resources\i-beam-removebg-preview %283%29.png" />
     <None Include="Resources\i-beam-removebg-preview %282%29.png" />
     <None Include="Resources\i-beam-removebg-preview %281%29.png" />

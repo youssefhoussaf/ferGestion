@@ -73,5 +73,10 @@ namespace Testapp
                 MessageBox.Show("Problème de connexion! ");
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

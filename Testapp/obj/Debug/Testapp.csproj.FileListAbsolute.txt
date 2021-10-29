@@ -117,3 +117,6 @@ C:\Users\MAZID\Desktop\projects\ferGestion\Testapp\obj\Debug\Testapp.exe.manifes
 C:\Users\MAZID\Desktop\projects\ferGestion\Testapp\obj\Debug\Testapp.application
 C:\Users\MAZID\Desktop\projects\ferGestion\Testapp\obj\Debug\Testapp.exe
 C:\Users\MAZID\Desktop\projects\ferGestion\Testapp\obj\Debug\Testapp.pdb
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.home.resources
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.achats.resources
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.addAchat.resources

@@ -35,7 +35,36 @@ namespace Testapp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            home h = new home();
+            h.Dock = DockStyle.Fill;
+            container.Controls.Add(h);
+        }
+
+        private void btn_home()
+        {
+            Button btn = new Button();
+            btn.Dock = DockStyle.Fill;
+            btn.BackColor = Color.FromArgb(52, 52, 76);
+            btn.Text = "X";
+            Font f = new Font("Arial", 12, FontStyle.Bold);
+            btn.Font = f;
+            btn.ForeColor = Color.White;
+            btn.TextAlign = ContentAlignment.MiddleCenter;
+            btn.Cursor = Cursors.Hand;
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.Click += new EventHandler(btn_home_Click);
+            btn_close_cnt.Controls.Add(btn);
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            lbl_title.Text = "HOME";
+            home h = new home();
+            h.Dock = DockStyle.Fill;
+            container.Controls.Add(h);
+            btn_close_cnt.Controls.Clear();
         }
 
 
@@ -46,6 +75,8 @@ namespace Testapp
             article.Dock = DockStyle.Fill;
             article.frm = this;
             container.Controls.Add(article);
+            lbl_title.Text = "ARTICLES";
+            btn_home();
         }
 
         private void btn_ventes_Click(object sender, EventArgs e)
@@ -55,6 +86,8 @@ namespace Testapp
             vente.Dock = DockStyle.Fill;
             vente.frm = this;
             container.Controls.Add(vente);
+            lbl_title.Text = "VENTES";
+            btn_home();
         }
 
         private void btn_types_Click(object sender, EventArgs e)
@@ -64,6 +97,8 @@ namespace Testapp
             type.Dock = DockStyle.Fill;
             type.frm = this;
             container.Controls.Add(type);
+            lbl_title.Text = "TYPES D'ARTICLES";
+            btn_home();
         }
 
         private void btn_articles_MouseEnter(object sender, EventArgs e)
@@ -113,6 +148,37 @@ namespace Testapp
         private void btn_ventes_MouseLeave(object sender, EventArgs e)
         {
             btn_ventes.BackColor = Color.FromArgb(52, 52, 76);
+        }
+
+        private void btn_achats_MouseEnter(object sender, EventArgs e)
+        {
+            btn_achats.BackColor = Color.FromArgb(105, 105, 155);
+        }
+
+        private void btn_achats_MouseLeave(object sender, EventArgs e)
+        {
+            btn_achats.BackColor = Color.FromArgb(52, 52, 76);
+        }
+
+        private void btn_types_MouseEnter(object sender, EventArgs e)
+        {
+            btn_types.BackColor = Color.FromArgb(105, 105, 155);
+        }
+
+        private void btn_types_MouseLeave(object sender, EventArgs e)
+        {
+            btn_types.BackColor = Color.FromArgb(52, 52, 76);
+        }
+
+        private void btn_achats_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            achats achat = new achats();
+            achat.Dock = DockStyle.Fill;
+            achat.frm = this;
+            container.Controls.Add(achat);
+            lbl_title.Text = "ACHATS";
+            btn_home();
         }
     }
 }

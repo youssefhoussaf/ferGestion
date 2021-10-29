@@ -92,5 +92,15 @@ namespace Testapp
                 MessageBox.Show("Problème de connexion! ");
             }
         }
+
+        private void btn_add_vente_MouseEnter(object sender, EventArgs e)
+        {
+            btn_add_vente.BackColor = Color.FromArgb(52, 52, 76);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

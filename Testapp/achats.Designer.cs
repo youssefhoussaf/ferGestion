@@ -1,7 +1,7 @@
 ﻿
 namespace Testapp
 {
-    partial class Article
+    partial class achats
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,15 +29,18 @@ namespace Testapp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Article));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(achats));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_add_article = new System.Windows.Forms.Button();
-            this.btn_modifier_article = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_add_achat = new System.Windows.Forms.Button();
+            this.btn_delete_achat = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_filter = new System.Windows.Forms.Button();
@@ -45,35 +48,54 @@ namespace Testapp
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_mois = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1077, 547);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 4;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 137);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1077, 410);
+            this.panel4.Size = new System.Drawing.Size(1077, 547);
             this.panel4.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1077, 547);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 134);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1077, 413);
+            this.panel3.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -84,71 +106,81 @@ namespace Testapp
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1077, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(1077, 413);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1077, 137);
-            this.panel3.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Controls.Add(this.panel1);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 84);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.groupBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1077, 53);
-            this.panel5.TabIndex = 4;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panel5.Size = new System.Drawing.Size(1077, 134);
+            this.panel5.TabIndex = 0;
             // 
-            // panel1
+            // panel6
             // 
-            this.panel1.Controls.Add(this.btn_add_article);
-            this.panel1.Controls.Add(this.btn_modifier_article);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(798, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 53);
-            this.panel1.TabIndex = 3;
+            this.panel6.BackColor = System.Drawing.Color.GhostWhite;
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 81);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1077, 53);
+            this.panel6.TabIndex = 4;
             // 
-            // btn_add_article
+            // pictureBox1
             // 
-            this.btn_add_article.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_add_article.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_add_article.Location = new System.Drawing.Point(14, 10);
-            this.btn_add_article.Name = "btn_add_article";
-            this.btn_add_article.Size = new System.Drawing.Size(122, 37);
-            this.btn_add_article.TabIndex = 0;
-            this.btn_add_article.Text = "Ajouter";
-            this.btn_add_article.UseVisualStyleBackColor = false;
-            this.btn_add_article.Click += new System.EventHandler(this.btn_add_article_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(202, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
-            // btn_modifier_article
+            // panel7
             // 
-            this.btn_modifier_article.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_modifier_article.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modifier_article.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modifier_article.ForeColor = System.Drawing.Color.Black;
-            this.btn_modifier_article.Location = new System.Drawing.Point(142, 10);
-            this.btn_modifier_article.Name = "btn_modifier_article";
-            this.btn_modifier_article.Size = new System.Drawing.Size(122, 37);
-            this.btn_modifier_article.TabIndex = 1;
-            this.btn_modifier_article.Text = "Modifier";
-            this.btn_modifier_article.UseVisualStyleBackColor = false;
-            this.btn_modifier_article.Click += new System.EventHandler(this.btn_modifier_article_Click);
+            this.panel7.Controls.Add(this.btn_add_achat);
+            this.panel7.Controls.Add(this.btn_delete_achat);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(799, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 53);
+            this.panel7.TabIndex = 3;
+            // 
+            // btn_add_achat
+            // 
+            this.btn_add_achat.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_add_achat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add_achat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_achat.ForeColor = System.Drawing.Color.Black;
+            this.btn_add_achat.Location = new System.Drawing.Point(14, 9);
+            this.btn_add_achat.Name = "btn_add_achat";
+            this.btn_add_achat.Size = new System.Drawing.Size(122, 37);
+            this.btn_add_achat.TabIndex = 0;
+            this.btn_add_achat.Text = "Ajouter";
+            this.btn_add_achat.UseVisualStyleBackColor = false;
+            this.btn_add_achat.Click += new System.EventHandler(this.btn_add_achat_Click);
+            // 
+            // btn_delete_achat
+            // 
+            this.btn_delete_achat.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_delete_achat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete_achat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_achat.ForeColor = System.Drawing.Color.Red;
+            this.btn_delete_achat.Location = new System.Drawing.Point(146, 9);
+            this.btn_delete_achat.Name = "btn_delete_achat";
+            this.btn_delete_achat.Size = new System.Drawing.Size(122, 37);
+            this.btn_delete_achat.TabIndex = 2;
+            this.btn_delete_achat.Text = "Supprimer";
+            this.btn_delete_achat.UseVisualStyleBackColor = false;
+            this.btn_delete_achat.Click += new System.EventHandler(this.btn_delete_achat_Click);
             // 
             // textBox1
             // 
@@ -170,7 +202,7 @@ namespace Testapp
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(15, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(513, 63);
+            this.groupBox1.Size = new System.Drawing.Size(524, 63);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
@@ -181,10 +213,10 @@ namespace Testapp
             this.btn_filter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_filter.ForeColor = System.Drawing.Color.Black;
-            this.btn_filter.Location = new System.Drawing.Point(387, 11);
+            this.btn_filter.Location = new System.Drawing.Point(398, 12);
             this.btn_filter.Name = "btn_filter";
             this.btn_filter.Size = new System.Drawing.Size(122, 47);
-            this.btn_filter.TabIndex = 3;
+            this.btn_filter.TabIndex = 7;
             this.btn_filter.Text = "Filtrer";
             this.btn_filter.UseVisualStyleBackColor = false;
             this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
@@ -213,7 +245,6 @@ namespace Testapp
             this.cmb_mois.Name = "cmb_mois";
             this.cmb_mois.Size = new System.Drawing.Size(121, 26);
             this.cmb_mois.TabIndex = 4;
-            this.cmb_mois.SelectedIndexChanged += new System.EventHandler(this.cmb_mois_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -224,35 +255,26 @@ namespace Testapp
             this.label1.TabIndex = 3;
             this.label1.Text = "Mois:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Article
+            // achats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Name = "Article";
+            this.Name = "achats";
             this.Size = new System.Drawing.Size(1077, 547);
-            this.Load += new System.EventHandler(this.Article_Load);
+            this.Load += new System.EventHandler(this.achats_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,19 +283,21 @@ namespace Testapp
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btn_add_article;
-        private System.Windows.Forms.Button btn_modifier_article;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btn_add_achat;
+        private System.Windows.Forms.Button btn_delete_achat;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cmb_mois;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_filter;
         private System.Windows.Forms.ComboBox cmb_annee;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_filter;
+        private System.Windows.Forms.ComboBox cmb_mois;
+        private System.Windows.Forms.Label label1;
     }
 }

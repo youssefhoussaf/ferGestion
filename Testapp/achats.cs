@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Testapp
 {
-    public partial class Ventes : UserControl
+    public partial class achats : UserControl
     {
-        public Ventes()
+        public achats()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace Testapp
             try
             {
                 DataTable dt_articles = new DataTable();
-                string query = "SELECT v.ID , v.created_at as 'date' , a.Article , v.Qte , v.Prix as 'P/U' , CONCAT( v.remise,'%') as 'remise' ,  (v.Prix * v.Qte) - (v.Prix * ISNULL(v.Qte/ NULLIF((v.remise),0),0)) as 'total' , v.Client , a.ID as 'article_id' FROM ventes v left join article a on a.ID = v.Article WhERE MONTH(v.Created_at) = @month AND YEAR(v.Created_at) = @year GROUP BY v.ID , v.remise , v.Client  , v.Qte , v.Prix , v.created_at , a.ID , a.Article;";
+                string query = "SELECT ach.ID , ach.created_at as 'date' , a.Article , ach.Qte , ach.Prix as 'P/U' , (ach.Prix * ach.Qte)  as 'total' , ach.Fourniseur , a.ID as 'article_id' FROM achats ach left join article a on a.ID = ach.Article WhERE MONTH(ach.Created_at) = @month AND YEAR(ach.Created_at) = @year GROUP BY ach.ID  , ach.Fourniseur , ach.Qte , ach.Prix , ach.created_at , a.ID , a.Article;";
                 SqlCommand cmd = new SqlCommand(query, cnx);
                 cmd.Parameters.AddWithValue("@year", cmb_annee.SelectedValue);
                 cmd.Parameters.AddWithValue("@month", cmb_mois.SelectedValue);
@@ -36,24 +36,22 @@ namespace Testapp
                 dt_articles.Load(dr);
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = dt_articles;
-                dataGridView1.Columns[8].Visible = false;
+                dataGridView1.Columns[7].Visible = false;
                 cnx.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Problème de connexion! ");
+                MessageBox.Show("Problème de connexion!");
                 frm.Close();
             }
         }
+
         void f_FormClosed(object sender, FormClosingEventArgs e)
         {
             load();
         }
-        private void btn_add_article_Click(object sender, EventArgs e)
-        {
-        }
 
-        private void Ventes_Load(object sender, EventArgs e)
+        private void achats_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             dt.Clear();
@@ -91,17 +89,12 @@ namespace Testapp
             load();
         }
 
-        private void btn_add_article_Click_1(object sender, EventArgs e)
+        private void btn_filter_Click(object sender, EventArgs e)
         {
-            Form addForm = new AddVentes();
-            addForm.FormClosing += new FormClosingEventHandler(f_FormClosed);
-            addForm.StartPosition = FormStartPosition.Manual;
-            addForm.Left = frm.Left + (frm.ClientSize.Width / 2) - (addForm.Width / 2);
-            addForm.Top = frm.Top + (frm.ClientSize.Height / 2) - (addForm.Height / 2);
-            addForm.ShowDialog();
+            load();
         }
 
-        private void btn_delete_article_Click(object sender, EventArgs e)
+        private void btn_delete_achat_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
@@ -118,7 +111,7 @@ namespace Testapp
                         int id = Convert.ToInt32(row.Cells[0].Value);
                         try
                         {
-                            string query = "delete from ventes where ID = @id";
+                            string query = "delete from achats where ID = @id";
                             SqlCommand cmd = new SqlCommand(query, cnx);
                             cmd.Parameters.AddWithValue("@id", id);
                             cnx.Open();
@@ -127,7 +120,7 @@ namespace Testapp
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Problème de connexion! ");
+                            MessageBox.Show("Problème de connexion!");
                         }
                     }
                     load();
@@ -135,14 +128,14 @@ namespace Testapp
             }
         }
 
-        private void btn_filter_Click(object sender, EventArgs e)
+        private void btn_add_achat_Click(object sender, EventArgs e)
         {
-            load();
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
+            Form addForm = new addAchat();
+            addForm.FormClosing += new FormClosingEventHandler(f_FormClosed);
+            addForm.StartPosition = FormStartPosition.Manual;
+            addForm.Left = frm.Left + (frm.ClientSize.Width / 2) - (addForm.Width / 2);
+            addForm.Top = frm.Top + (frm.ClientSize.Height / 2) - (addForm.Height / 2);
+            addForm.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

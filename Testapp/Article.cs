@@ -55,6 +55,9 @@ namespace Testapp
         {
             Form addForm = new AddArticle();
             addForm.FormClosing += new FormClosingEventHandler(f_FormClosed);
+            addForm.StartPosition = FormStartPosition.Manual;
+            addForm.Left = frm.Left + (frm.ClientSize.Width / 2) - (addForm.Width / 2);
+            addForm.Top = frm.Top + (frm.ClientSize.Height / 2) - (addForm.Height / 2);
             addForm.ShowDialog();
         }
 
@@ -104,13 +107,16 @@ namespace Testapp
             }
             else
             {
-                UpdateArticle frm = new UpdateArticle();
-                frm.id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                frm.type = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[6].Value);
-                frm.prix = Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[2].Value);
-                frm.article = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-                frm.FormClosing += new FormClosingEventHandler(f_FormClosed);
-                frm.ShowDialog();
+                UpdateArticle frmU = new UpdateArticle();
+                frmU.id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                frmU.type = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[6].Value);
+                frmU.prix = Convert.ToDouble(dataGridView1.SelectedRows[0].Cells[2].Value);
+                frmU.article = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                frmU.FormClosing += new FormClosingEventHandler(f_FormClosed);
+                frmU.StartPosition = FormStartPosition.Manual;
+                frmU.Left = frm.Left + (frm.ClientSize.Width / 2) - (frmU.Width / 2);
+                frmU.Top = frm.Top + (frm.ClientSize.Height / 2) - (frmU.Height / 2);
+                frmU.ShowDialog();
 
             }
         }
@@ -164,6 +170,13 @@ namespace Testapp
         private void btn_filter_Click(object sender, EventArgs e)
         {
             load();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var dt = (DataTable)dataGridView1.DataSource;
+            dt.DefaultView.RowFilter = string.Format("Article like '%{0}%'", textBox1.Text.Trim().Replace("'", "''"));
+            dataGridView1.Refresh();
         }
     }
 }
