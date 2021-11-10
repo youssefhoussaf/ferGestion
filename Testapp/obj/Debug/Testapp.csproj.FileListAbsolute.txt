@@ -120,3 +120,7 @@ C:\Users\MAZID\Desktop\projects\ferGestion\Testapp\obj\Debug\Testapp.pdb
 C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.home.resources
 C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.achats.resources
 C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.addAchat.resources
+C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.achats.resources
+C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.addAchat.resources
+C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.home.resources
+C:\Users\ABDSAMAD\Desktop\projet\ferGestion\Testapp\obj\Debug\Testapp.csproj.ResolveComReference.cache
