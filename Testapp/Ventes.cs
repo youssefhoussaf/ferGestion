@@ -160,7 +160,7 @@ namespace Testapp
         private void Exp_excel_Click(object sender, EventArgs e)
         {
             // creating Excel Application  
-            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            /*Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             // creating new WorkBook within Excel application  
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
             // creating new Excelsheet in workbook  
@@ -189,7 +189,36 @@ namespace Testapp
             // save the application  
             //workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
-            app.Quit();
+            app.Quit();*/
+        }
+
+        private void btn_imprimer_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("selectinner au moins un ligne");
+            }
+            else if (dataGridView1.SelectedRows.Count > 20)
+            {
+                MessageBox.Show("vous avez depasser 20 ligne");
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("N", typeof(int));
+                dt.Columns.Add("Article", typeof(string));
+                dt.Columns.Add("Qte", typeof(double));
+                dt.Columns.Add("PU", typeof(double));
+                dt.Columns.Add("Remise", typeof(string));
+                dt.Columns.Add("Total", typeof(double));
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    dt.Rows.Add(row.Cells[0].Value, row.Cells[2].Value, row.Cells[3].Value, row.Cells[4].Value, row.Cells[5].Value, row.Cells[6].Value);
+                }
+                print_recu frm = new print_recu();
+                frm.data = dt;
+                frm.ShowDialog();
+            }
         }
     }
 }
