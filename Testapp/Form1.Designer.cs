@@ -31,7 +31,12 @@ namespace Testapp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_types = new System.Windows.Forms.Button();
+            this.btn_achats = new System.Windows.Forms.Button();
+            this.btn_ventes = new System.Windows.Forms.Button();
+            this.btn_articles = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.container = new System.Windows.Forms.Panel();
             this.headerBar = new System.Windows.Forms.Panel();
@@ -41,21 +46,18 @@ namespace Testapp
             this.btn_close = new System.Windows.Forms.Button();
             this.btn_maxi = new System.Windows.Forms.Button();
             this.btn_mini = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_types = new System.Windows.Forms.Button();
-            this.btn_achats = new System.Windows.Forms.Button();
-            this.btn_ventes = new System.Windows.Forms.Button();
-            this.btn_articles = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.headerBar.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_types);
@@ -68,6 +70,16 @@ namespace Testapp
             this.panel1.Size = new System.Drawing.Size(231, 682);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(59, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(94, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -78,6 +90,99 @@ namespace Testapp
             this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "PF Aluminium";
+            // 
+            // btn_types
+            // 
+            this.btn_types.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_types.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_types.FlatAppearance.BorderSize = 0;
+            this.btn_types.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_types.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_types.ForeColor = System.Drawing.Color.White;
+            this.btn_types.Image = global::Testapp.Properties.Resources.i_beam_removebg_preview__3_1;
+            this.btn_types.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_types.Location = new System.Drawing.Point(0, 307);
+            this.btn_types.Name = "btn_types";
+            this.btn_types.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_types.Size = new System.Drawing.Size(229, 64);
+            this.btn_types.TabIndex = 3;
+            this.btn_types.Text = " Types d\'article";
+            this.btn_types.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_types.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_types.UseVisualStyleBackColor = false;
+            this.btn_types.Click += new System.EventHandler(this.btn_types_Click);
+            this.btn_types.MouseEnter += new System.EventHandler(this.btn_types_MouseEnter);
+            this.btn_types.MouseLeave += new System.EventHandler(this.btn_types_MouseLeave);
+            // 
+            // btn_achats
+            // 
+            this.btn_achats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_achats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_achats.FlatAppearance.BorderSize = 0;
+            this.btn_achats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_achats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_achats.ForeColor = System.Drawing.Color.White;
+            this.btn_achats.Image = global::Testapp.Properties.Resources.download_removebg_preview__1_;
+            this.btn_achats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_achats.Location = new System.Drawing.Point(0, 245);
+            this.btn_achats.Name = "btn_achats";
+            this.btn_achats.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_achats.Size = new System.Drawing.Size(229, 64);
+            this.btn_achats.TabIndex = 2;
+            this.btn_achats.Text = " Achats";
+            this.btn_achats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_achats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_achats.UseVisualStyleBackColor = false;
+            this.btn_achats.Click += new System.EventHandler(this.btn_achats_Click);
+            this.btn_achats.MouseEnter += new System.EventHandler(this.btn_achats_MouseEnter);
+            this.btn_achats.MouseLeave += new System.EventHandler(this.btn_achats_MouseLeave);
+            // 
+            // btn_ventes
+            // 
+            this.btn_ventes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_ventes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ventes.FlatAppearance.BorderSize = 0;
+            this.btn_ventes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ventes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ventes.ForeColor = System.Drawing.Color.White;
+            this.btn_ventes.Image = global::Testapp.Properties.Resources.images__1__removebg_preview__2_;
+            this.btn_ventes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ventes.Location = new System.Drawing.Point(0, 182);
+            this.btn_ventes.Name = "btn_ventes";
+            this.btn_ventes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_ventes.Size = new System.Drawing.Size(229, 64);
+            this.btn_ventes.TabIndex = 1;
+            this.btn_ventes.Text = " Ventes";
+            this.btn_ventes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ventes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ventes.UseVisualStyleBackColor = false;
+            this.btn_ventes.Click += new System.EventHandler(this.btn_ventes_Click);
+            this.btn_ventes.MouseEnter += new System.EventHandler(this.btn_ventes_MouseEnter);
+            this.btn_ventes.MouseLeave += new System.EventHandler(this.btn_ventes_MouseLeave);
+            // 
+            // btn_articles
+            // 
+            this.btn_articles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btn_articles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_articles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_articles.FlatAppearance.BorderSize = 0;
+            this.btn_articles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_articles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_articles.ForeColor = System.Drawing.Color.White;
+            this.btn_articles.Image = global::Testapp.Properties.Resources.i_beam_removebg_preview__3_;
+            this.btn_articles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_articles.Location = new System.Drawing.Point(0, 119);
+            this.btn_articles.Name = "btn_articles";
+            this.btn_articles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_articles.Size = new System.Drawing.Size(229, 64);
+            this.btn_articles.TabIndex = 0;
+            this.btn_articles.Text = " Articles";
+            this.btn_articles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_articles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_articles.UseVisualStyleBackColor = false;
+            this.btn_articles.Click += new System.EventHandler(this.btn_articles_Click);
+            this.btn_articles.MouseEnter += new System.EventHandler(this.btn_articles_MouseEnter);
+            this.btn_articles.MouseLeave += new System.EventHandler(this.btn_articles_MouseLeave);
             // 
             // panel2
             // 
@@ -186,108 +291,26 @@ namespace Testapp
             this.btn_mini.UseVisualStyleBackColor = true;
             this.btn_mini.Click += new System.EventHandler(this.btn_mini_Click);
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_types
-            // 
-            this.btn_types.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_types.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_types.FlatAppearance.BorderSize = 0;
-            this.btn_types.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_types.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_types.ForeColor = System.Drawing.Color.White;
-            this.btn_types.Image = global::Testapp.Properties.Resources.i_beam_removebg_preview__3_1;
-            this.btn_types.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_types.Location = new System.Drawing.Point(0, 307);
-            this.btn_types.Name = "btn_types";
-            this.btn_types.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_types.Size = new System.Drawing.Size(229, 64);
-            this.btn_types.TabIndex = 3;
-            this.btn_types.Text = " Types d\'article";
-            this.btn_types.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_types.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_types.UseVisualStyleBackColor = false;
-            this.btn_types.Click += new System.EventHandler(this.btn_types_Click);
-            this.btn_types.MouseEnter += new System.EventHandler(this.btn_types_MouseEnter);
-            this.btn_types.MouseLeave += new System.EventHandler(this.btn_types_MouseLeave);
-            // 
-            // btn_achats
-            // 
-            this.btn_achats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_achats.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_achats.FlatAppearance.BorderSize = 0;
-            this.btn_achats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_achats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_achats.ForeColor = System.Drawing.Color.White;
-            this.btn_achats.Image = global::Testapp.Properties.Resources.download_removebg_preview__1_;
-            this.btn_achats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_achats.Location = new System.Drawing.Point(0, 245);
-            this.btn_achats.Name = "btn_achats";
-            this.btn_achats.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_achats.Size = new System.Drawing.Size(229, 64);
-            this.btn_achats.TabIndex = 2;
-            this.btn_achats.Text = " Achats";
-            this.btn_achats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_achats.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_achats.UseVisualStyleBackColor = false;
-            this.btn_achats.Click += new System.EventHandler(this.btn_achats_Click);
-            this.btn_achats.MouseEnter += new System.EventHandler(this.btn_achats_MouseEnter);
-            this.btn_achats.MouseLeave += new System.EventHandler(this.btn_achats_MouseLeave);
-            // 
-            // btn_ventes
-            // 
-            this.btn_ventes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_ventes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ventes.FlatAppearance.BorderSize = 0;
-            this.btn_ventes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ventes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ventes.ForeColor = System.Drawing.Color.White;
-            this.btn_ventes.Image = global::Testapp.Properties.Resources.images__1__removebg_preview__2_;
-            this.btn_ventes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ventes.Location = new System.Drawing.Point(0, 182);
-            this.btn_ventes.Name = "btn_ventes";
-            this.btn_ventes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_ventes.Size = new System.Drawing.Size(229, 64);
-            this.btn_ventes.TabIndex = 1;
-            this.btn_ventes.Text = " Ventes";
-            this.btn_ventes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ventes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ventes.UseVisualStyleBackColor = false;
-            this.btn_ventes.Click += new System.EventHandler(this.btn_ventes_Click);
-            this.btn_ventes.MouseEnter += new System.EventHandler(this.btn_ventes_MouseEnter);
-            this.btn_ventes.MouseLeave += new System.EventHandler(this.btn_ventes_MouseLeave);
-            // 
-            // btn_articles
-            // 
-            this.btn_articles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btn_articles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_articles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_articles.FlatAppearance.BorderSize = 0;
-            this.btn_articles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_articles.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_articles.ForeColor = System.Drawing.Color.White;
-            this.btn_articles.Image = global::Testapp.Properties.Resources.i_beam_removebg_preview__3_;
-            this.btn_articles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_articles.Location = new System.Drawing.Point(0, 119);
-            this.btn_articles.Name = "btn_articles";
-            this.btn_articles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_articles.Size = new System.Drawing.Size(229, 64);
-            this.btn_articles.TabIndex = 0;
-            this.btn_articles.Text = " Articles";
-            this.btn_articles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_articles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_articles.UseVisualStyleBackColor = false;
-            this.btn_articles.Click += new System.EventHandler(this.btn_articles_Click);
-            this.btn_articles.MouseEnter += new System.EventHandler(this.btn_articles_MouseEnter);
-            this.btn_articles.MouseLeave += new System.EventHandler(this.btn_articles_MouseLeave);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Testapp.Properties.Resources.i_beam_removebg_preview__3_1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1, 378);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(229, 64);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Recap";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -303,11 +326,11 @@ namespace Testapp
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.headerBar.ResumeLayout(false);
             this.headerBar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,6 +353,7 @@ namespace Testapp
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Panel btn_close_cnt;
+        private System.Windows.Forms.Button button1;
     }
 }
 

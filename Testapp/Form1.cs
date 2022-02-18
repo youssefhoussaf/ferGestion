@@ -180,5 +180,16 @@ namespace Testapp
             lbl_title.Text = "ACHATS";
             btn_home();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            recapp type = new recapp();
+            type.Dock = DockStyle.Fill;
+            type.frm = this;
+            container.Controls.Add(type);
+            lbl_title.Text = "Recap";
+            btn_home();
+        }
     }
 }

@@ -145,3 +145,4 @@ C:\Users\houssaf\Desktop\FerGestion\Testapp\bin\Debug\CrystalDecisions.ReportApp
 C:\Users\houssaf\Desktop\FerGestion\Testapp\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\houssaf\Desktop\FerGestion\Testapp\bin\Debug\stdole.dll
 C:\Users\houssaf\Desktop\FerGestion\Testapp\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\houssaf\Desktop\FerGestion\Testapp\obj\Debug\Testapp.recapp.resources
